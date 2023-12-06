@@ -8,3 +8,9 @@ before_install:
 
 script:
   docker run -e CI=true umernisar/travis-react npm run test -- --coverage
+
+deploy:
+  provider: azure_web_apps
+  username: dock-react\$dock-react
+  password: d22dZeaokHWp11kMTeKYi1xrh3eEoNsRJXNHrX8io0qdjtZPTbLjoNWhidF5
+  site: "dock-react"
