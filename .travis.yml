@@ -11,6 +11,6 @@ script:
 
 deploy:
   provider: azure_web_apps
-  username: dock-react\$dock-react
-  password: d22dZeaokHWp11kMTeKYi1xrh3eEoNsRJXNHrX8io0qdjtZPTbLjoNWhidF5
+  username: "$dock-react"
+  password: "d22dZeaokHWp11kMTeKYi1xrh3eEoNsRJXNHrX8io0qdjtZPTbLjoNWhidF5"
   site: "dock-react"
