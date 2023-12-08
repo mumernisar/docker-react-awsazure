@@ -1,4 +1,4 @@
-FROM node:16-alpine as builder
+FROM node:16-alpine as build
 
 USER node
 
@@ -12,15 +12,10 @@ COPY --chown=node:node ./ ./
 
 RUN npm run build
 
-
-
-
 # Stage
 
 FROM nginx
+
+COPY --from=build /app/build /usr/share/nginx/html
 EXPOSE 80
-EXPOSE 3000
-COPY --from=builder /app/build /usr/share/nginx/html
-
-
 
