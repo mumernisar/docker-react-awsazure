@@ -4,7 +4,7 @@ serices:
 
 
 before_install:
-  docker build -t umernisar/travis-react -f Dockerfile.dev .
+  docker build -t umernisar/travis-react -f Dockerfile .
 
 script:
   docker run -e CI=true umernisar/travis-react npm run test -- --coverage
