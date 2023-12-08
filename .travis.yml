@@ -1,10 +1,10 @@
 sudo: required
-serices:
-  - docker
 
+serices:
+  - docker,npm
 
 before_install:
-  docker build -t umernisar/travis-react -f Dockerfile .
+  docker build -t umernisar/travis-react -f Dockerfile.dev .
 
 script:
   docker run -e CI=true umernisar/travis-react npm run test -- --coverage
